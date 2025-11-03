@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Header";
 import API from "../services/api";
 
-const Tabs = () => {
+const HomePage = () => {
   const [activeTab, setActiveTab] = useState("tab1");
   const [role, setRole] = useState("user"); // default to "user"
   const [loading, setLoading] = useState(true);
@@ -108,4 +108,4 @@ const Tabs = () => {
   );
 };
 
-export default Tabs;
+export default HomePage;

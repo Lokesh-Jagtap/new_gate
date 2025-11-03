@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import API from "../services/api";
-import Cookies from "js-cookie"; // 🧩 Add this line
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -83,7 +82,7 @@ const Login = () => {
       // 🔹 Handle success
       if (data.success) {
         setMessage("Login successful!");
-        navigate("/tabs"); // Redirect to tabs after login
+        navigate("/homepage"); // Redirect to homepage after login
       } else {
         // Fallback in case backend doesn’t send success flag
         setErrors({ form: "Unexpected response from server." });

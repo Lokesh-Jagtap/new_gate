@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/Login";
 import ForgotPassword from "./components/ForgotPassword";
 import Dashboard from "./components/Dashboard";
-import Tabs from "./components/Tabs";
+import HomePage from "./components/HomePage";
 import GateEntryReport from "./components/GateEntryReport";
 import Cancel from "./components/Cancel";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -15,10 +15,10 @@ function App() {
 
       {/* 🔒 Protected Routes */}
       <Route
-        path="/tabs"
+        path="/homepage"
         element={
           <ProtectedRoute>
-            <Tabs />
+            <HomePage />
           </ProtectedRoute>
         }
       />

@@ -23,7 +23,7 @@ function ProtectedRoute({ children, allowedRoles }) {
           // ✅ If route has role restrictions, enforce them
           if (allowedRoles && !allowedRoles.includes(userRole)) {
             setAuthorized(false);
-            navigate("/tabs", { replace: true }); // redirect to home/tabs
+            navigate("/homepage", { replace: true }); // redirect to home/homepage
             return;
           }
 
