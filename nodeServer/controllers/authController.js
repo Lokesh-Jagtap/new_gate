@@ -61,7 +61,7 @@ export const register = async (req, res) => {
     const requester = req.user; // Comes from JWT
 
     // ✅ Only admin can register new users (not superadmin or users)
-    if (requester.role !== "admin") {
+    if (requester.role !== "admin" && requester.role !== "superadmin") {
       return res.status(403).json({
         success: false,
         message: "Only admin can register new users.",
